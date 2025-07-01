@@ -1,0 +1,67 @@
+git and GitHub commands
+ 1. To install git in your ec2-instance
+   sudo apt-get update
+   sudo apt-get install git -y
+   git --version
+
+   *create one directory in that initiate git
+    mkdir my_project
+    cd my_project
+    to listout all dir.and files --> ls -a  
+    initialize empty directory --> git init
+
+ 2. create GitHub account and public repo to pull and push the files
+   
+ 3. To pull the files from  gitgub to local git repo--> git pull git hub repo link add here 
+ 
+ 4. config your git to push the files to GitHub (for single user)--> git config --global user.name "GitHub username" 
+                                     git config --global user. Email "your email-id which you used to create GitHub a/c"
+   # list out all the config--> git config --list
+  
+ 5. add your git to GitHub to push the files--> git remote add origin githubrepolink
+                                           git remote add origin master (master is default branch name in GitHub)  
+ 
+ 6. Add files onto staged area --> git add . or git add filename
+    commit files into committed area --> git commit -m "message"
+ 
+ 7. Now you can push your files into GitHub--> git push origin master
+                       enter your username and password(access token) 
+
+ 8. To check status of file--> git status
+
+ 9. To check detailed information about all commit--> git log
+ 
+ 10. To check difference between files present in modified area and stagged area--> git diff or git difftool
+ 
+ 11. To check difference between files present in committed area and stagged area--> git diff --staged or git difftool --staged
+ 
+ 12. To check difference between files present in modified area and committed area --> git diff HEAD or git difftool HEAD
+
+ 13. To get back files from staged area to working area--> git reset filename
+
+ 14. Get back file from committed area to working area --> git reset --soft HEAD
+ 
+ 15. To delete  latest commit --> git reset HEAD
+ 
+ 16. To reset your specific commit-->  git reset --hard HEAD~no.(1/2/3/4/8)
+                                    git reset --hard HEAD~5 --> it reset the latest head will be 5th commit
+
+ 17. Rename your variable name i.e origin --> git remote rename old-name new-name 
+                                          git remote rename origin myorigin
+ 18. listout the available branches--> git branch
+ 
+ 19. Create new branch --> git branch branch-name
+                          git branch testing
+ 20. To switch the branch --> git checkout branch-name
+                             git checkout master
+ 21. To know your variable name --> git remote
+ 
+ 22. To merge the files of one branch to another branch --> git merge master (where you want to merge)
+ 
+ 23. list put the tag --> git tag
+
+ 24. Assign tag to commit (it assign to latest commit)-->git tag tag-name  (ex- git tag v1.0)
+
+ 25. Assign tag to specific commit--> git tag tag-name commit_id
+ 
+ 
